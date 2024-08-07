@@ -27,12 +27,8 @@
 	Large Map Assault       - Like in Thief, backtracking is required once the map objectives are done. While player is backtracking, exit strategy changes. 
 	Vehicle Hunting         - Straightforward at a glance. Iterate for any vehicles in the map then use one as a getaway object. As long as it is intact.  
 	Mission Searching       - For any pickup in the level, find one and turn it into goal object. If a scriptedpawn is in the vicinity - have them take it. 
-	Map Control             - Involves 
+	Map Control             - Involves the use of various disposable tools found in the map, similar to unreal's deathmatch gameplay loop but in singleplayer. 
 	Linear Sequence         - Straightforward logic with little to no backtracking. Flow usually determined by triggered events or key-related objectives.
-	Key Hunting             -
-	Map Control             -
-	Artifact Hunting        -
-	Puzzle Solving          -
-	Log Hunting             -
-	Key Hunting             -
-	Talking                 -
+	Artifact Hunting        - same as key hunting, just use a different mesh
+	Log Hunting             - same as book searching, but forces the player to memorize certain plot details for stuff like being questioned or opening the exit
+	Talking                 - nightmare to do from scratch, so this will probably use firetrucks extensively
