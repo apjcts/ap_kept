@@ -70,7 +70,7 @@ Build Instructions
 
 To build the .uc files contained within this repository, you'll need to get rid of virtually every content importing subroutine within. 
 While the task is kind of pointless, it would be funny to see someone try it (and fail). I'd suggest decompiling the packages, you can 
-get them here: 	
+get them here: 	(will be added later)
 
 8s,<&}p@Rt+/eScC will open apkept.zip for viewing, it will contain precompiled assets needed for testing.
 "Why the password?" you might ask. Well... To make things more complicated. Since the file is hosted on 
