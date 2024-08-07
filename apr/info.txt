@@ -1,0 +1,38 @@
+
+        MP				-	Thematic Inspo		Play Margins
+	Core Pack			-	Evil Dead 2		Puzzle Solving - Password Searching - Key Hunting
+	Millenium Pack			-	X-Files / Sliders	Countdown Invasion - Pawn Assasination - Gateway Hunting
+	Piracy Mission Pack		-	Obviously Pirates	Island Control - Skeleton Hunting - Artifact Hunting
+	Gateway Mission Pack		-	Evil Dead 3		Book Searching - Skeleton Hunting - Large Map Assault
+	Intrepid Mission Pack		-	DS9 / Voyager		Force Field Searching - Ship Control - Away Mission Hunting
+	Desert Mission Pack             -       MGS V / Underhell	Pawn Assasination - Level Maintenance - Large Map Assault
+	Driving Mission Pack		-	Saints Row 2, 3, 4	Vehicle Hunting, Mission Searching, Map Control, Countdown Invasion
+	Cerberus Mission Pack		-	Mass Effect 1, 2, 3     Linear Sequence, Key Hunting, Map Control, Artifact Hunting
+	Cube Mission Pack		-	Cube Zero, Hypercube	Puzzle Solving, Log Hunting, Key Hunting, Talking
+
+
+	Terminology Reference: 
+	Puzzle Solving 		- To continue, we approach an actor that takes control of our camera to do an arbitrary puzzle. Requires unique item storage.  
+	Password Searching 	- Key combinations are randomized each time the level is reset. Their locations (depending on properties) can be randomized.
+	Key Hunting 		- Player is given a random findable required to open the exit. Skeleton Hunting and Artifact Hunting are related to this type.
+	Countdown Invasion 	- This requires level setup to fit arena layouts. Player encounters an arbitrary mover that needs (countdown) time to open. 
+	Gateway Hunting		- Mostly done level-side: player has to reroute a group of warpzones correctly to reach an exit. Maybe by finding an item.
+	Island Control 		- Similar to onslaught: In hostile areas - a node scans for living _hate pawns. If none can be found, we are given area control.
+	Book Searching		- To finish the map, player is tasked with finding a special translator message (unless the map provides a good substitute).
+	Force Field Searching 	- Somewhat similar to Map Control. Requires setup from the editor. Map flow is guided by how player redirects each forcefield.
+	Ship Control            - Requires a large map for workspace-related objectives. Also requires a _friendly pawn to interact with, as well as the reward.
+	Away Mission Hunting    - Player is given a unique objective, usually related to rescuing a _friendly pawn or finding a key to exit this mission space.
+	Pawn Assasination       - Player is tasked with destroying a specific pawn. The circumstances of this goal are randomized every time the map is started.
+	Level Maintenance       - To exit the level, player has to find object A and repair it with object B by finding object C, which is obscured by object D.
+	Large Map Assault       - Like in Thief, backtracking is required once the map objectives are done. While player is backtracking, exit strategy changes. 
+	Vehicle Hunting         - Straightforward at a glance. Iterate for any vehicles in the map then use one as a getaway object. As long as it is intact.  
+	Mission Searching       - For any pickup in the level, find one and turn it into goal object. If a scriptedpawn is in the vicinity - have them take it. 
+	Map Control             - Involves 
+	Linear Sequence         - Straightforward logic with little to no backtracking. Flow usually determined by triggered events or key-related objectives.
+	Key Hunting             -
+	Map Control             -
+	Artifact Hunting        -
+	Puzzle Solving          -
+	Log Hunting             -
+	Key Hunting             -
+	Talking                 -

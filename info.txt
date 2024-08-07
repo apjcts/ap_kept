@@ -1,0 +1,116 @@
+================================================================
+Title                   : apKEPT (exploration project template)
+Version                 : 0.003
+Release Date            : haha, never.
+Author                  : Michael Corwyn (ap, alt, apjcts)
+Email Address           : ahynix@gmail.com
+Web Page                : https://aprjcts.github.io/index/
+Description             : Skeleton for Unreal Mission Packs
+Where to get this mod   : https://github.com/aprjcts/ap_kept
+================================================================
+
+--- Play Information ---
+Game                    : Unreal(1998), v. 227k
+Levels             	: Core Mission Pack
+Single Player           : Yeah, sort of
+Cooperative             : Yes, but untested
+Deathmatch              : Not until I'm done with this campaign :)
+Difficulty Settings     : Yes, but not implemented yet (in other words: no)
+New Sounds              : yes, for more detail see Authorship.txt (when it's done TM)
+New Voices		: No, but if you have a good mic, see IndenturedVoices.txt (soon TM)
+New Music		: Yep, for more detail see OfMusicAndMice(and how we lost our rights).txt
+New Graphics            : uhhuh, for more detail.. Grappho.txt (soon TM)
+New UnrealScript        : for more detail see april/info.txt but keep in mind that file is obsolete
+External DLLs           : No, but we'd hire you! (if u work for free)
+Known bugs              : crouching speeds are broken due to shit code
+
+--- Construction ---
+Editor(s) used          : UnrealEd 2.2, FarManager, ClipStudio, Krita, Audacity, Blender
+Construction Time       : Five Months (unreal package version), 6 Years (plot outlines)
+
+
+Cleanup Guide                                                                 
+-----------------
+If you wish to update the packages, make sure to get rid of listed-below files before installing the next version: 
+
+	apcamera.u 
+	apr.u 
+	april.ini 		<- you'll need to edit the new version to keep your preferences
+	april.u 
+	april_demo.bat 		<- incase launch settings have been changed by the author (which is VERY likely)
+	april_main.bat          <- same deal
+	apriluser.ini 		
+	APRLANG_aprw_v2.ini 
+	aprlc.u 
+	aprng.u 
+	aprngc.u
+
+Note that ini files are kept read-only to avoid inconsistencies, be sure to switch toggle it back on if you edited the file. 
+This is needed to keep some magic numbers afloat during the gameplay process - as it updates the ini file at runtime automatically.
+If you mess with inis to the point of no return, you can recompile them by using [dumpint packagename.u] in unreal's ucc commandlet.	
+
+Installation
+------------
+COPY 	.unr files	to 	Unreal/Maps folder
+COPY	.txt files	to 	Unreal/Help folder
+COPY	.html files	to 	Unreal/Help folder
+COPY	.umx files	to	Unreal/Music folder
+COPY	.uax files	to	Unreal/Sounds folder
+COPY	.utx files	to	Unreal/Textures folder
+COPY	.u files 	to	Unreal/System folder
+COPY	.ini files 	to	Unreal/System folder
+COPY	.int files 	to	Unreal/System folder
+
+In order for these packages to work, you need a copy of Unreal 
+with the OldUnreal Patch installed, you can find the patch here: 
+https://github.com/OldUnreal/Unreal-testing/releases/tag/v227k
+
+Build Instructions
+------------------
+
+To build the .uc files contained within this repository, you'll need to get rid of virtually every content importing subroutine within. 
+While the task is kind of pointless, it would be funny to see someone try it (and fail). I'd suggest decompiling the packages, you can 
+get them here: 	
+
+8s,<&}p@Rt+/eScC will open apkept.zip for viewing, it will contain precompiled assets needed for testing.
+"Why the password?" you might ask. Well... To make things more complicated. Since the file is hosted on 
+archive.org i felt it'd be sensible to lock it behind a sequence of random digits and numbers. It's only 
+sensible considering the amount of hoops we have to jump through to access the goods. Any goods, really.
+
+Version History
+---------------
+
+version 0.03  - added this file 
+
+Extended description:
+--------------------
+"" - later
+"" - later
+
+
+Story
+-----
+
+later
+
+Technical Notes
+---------------
+
+later
+
+
+Copyright / Permissions
+-----------------------
+creative commons, attribution-noncommercial
+please credit the author whenever you can, 
+just add ap at the end of your file :)
+
+	----------------------
+	UNREAL (c)1998 Epic Megagames, Inc.  
+	All Rights Reserved.  
+	Distributed by GT Interactive Software, Inc. under license.  
+	UNREAL and the UNREAL logo are registered trademarks of Epic Megagames, Inc. 
+	All other trademarks and trade names are properties of their respective owners.
+
+
+*end of file*

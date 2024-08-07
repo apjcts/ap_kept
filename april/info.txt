@@ -1,0 +1,87 @@
+================================================================================================================================================================
+April Kellie Base Class - Main package, has all temporary content. 06/18/2024 : main classes for the season will be done in aprlc. oh well.
+================================================================================================================================================================
+
+
+todo: exclude 
+----------------------------------------------------------------------------------------------------------------------------------------------------------------
+Tool				User Interaction			Yeah, yeah - we get it. What the fuck does it LITERALLY do?
+----------------------------------------------------------------------------------------------------------------------------------------------------------------
+[ ]core_commands.uc		CMD, user interface for everything	basic console interface for custom functions with blood-like reference titles
+[ ]core_viewspot.uc		camera-related magic goes here          bobbing and rolling controls, view modifiers, viewmodel animation controls (inertia)
+[ ]core_movemagic.uc		movement related magic goes here        sprinting modifiers, dodging modifiers, ducking modifiers, jumping modifiers
+[ ]core_climbable.uc		mantling control, thief-style		tracers that modify player physics! bugs galore on this one. climbable decorations  
+[ ]core_symbolkey.uc		key management, inventory magic		ghost inventory (for important stuff) and user inventory (left-hand items)
+[ ]core_RHandling.uc		sidearms: hands, glock, mac10, extras	right handed items. up to 4 slots. extras contain two-handed weaponry. 
+[ ]core_LHandling.uc		tools: light, healthtrack, itemtrack	left handed items. inventory stuff, traditional cycling behavior (with viewmeshes)
+[ ]core_saveinject.uc		save-related tools: static, qsinject 	quicksave injector, static saving spot machine, inventory_floppies for that machine
+[ ]core_fftools.uc		fftrack, ffdrain, ffnode, ffdirect	fear factor tracker tool, fearfactor/health converter, fear factor canvas monitoring
+[ ]core_diffdirect.uc		dynamic difficulty modifier director	bullet instakill, bulletproof coat stuff, damage-controlling modifiers, dynamic speeds? 
+[ ]core_ammomanager.uc		reloader subroutine, ammo management	Switching does (not) reload. Mag mngr: kill unspent ammo switch, reloadability switch.
+[ ]core_throwables.uc		useable decorations, throwables		vases/bottles/knives whatever! if it's throwable it goes here. each needs a viewmesh
+----------------------------------------------------------------------------------------------------------------------------------------------------------------
+[ ]item_personalmenu.uc		F1 -> contains: user settings, inventory belt, save/load device, weapon reload device
+[ ]item_objectivemap.uc		F2 -> contains: thought map, immediate and secondary goals, plot notes, goal inventories
+[ ]item_playerstatus.uc		F3 -> health/item/fearfactor/powerup tracking device, read-only item: stat percentages
+[ ]item_progressmenu.uc		F4 -> likely for player-related data, haven't decided what it does yet, maybe reserve this for powerup menu
+----------------------------------------------------------------------------------------------------------------------------------------------------------------
+[ ]wpn_primary_glock.uc		main glock weapon, akimboolean toggle, user can toggle both hands, toggleable silencer upgrade, ironsight operation, reloader
+[ ]wpn_2handed_glock.uc		(no) ironsight operation, faster firing rate on altfire, toggleable reloading, ironsight operation OR altfire operation switch
+[ ]wpn_akimbo_glocks.uc		no ironsight operation, altfire fires right weapon, primary fires left weapon, has toggleable viewmesh flip in the options item
+----------------------------------------------------------------------------------------------------------------------------------------------------------------
+[ ]wpn_ingram.uc		ADFUNC standard issue, toggleable silencer upgrade, ironsight operation, reloader
+[/]wpn_phxmp5x.uc		PHX standard issue, toggleable GL upgrade, no ironsight operation, reloader
+[ ]wpn_phx1014.uc		PHX standard issue, only found near contractors, single/double fire modes, no ironsight operation 
+[ ]wpn_sawdoff.uc		reference weapon, single/double fire modes, automatically reloads on weaponswitch, no ironsight operation
+[-]wpn_tentmag.uc               automatic, fires tentacle projectiles
+[ ]wpn_ds9pistol.uc		specialized weapon, fires a short energy beam. has stun/kill setting (can only melt certain metal obstructions?)
+[ ]wpn_blackpack.uc		specialized weapon, fires a wide coating of vaporizing particles. has low radii/wide radii switch (organic obstructions?)
+[ ]wpn_8bgrenade.uc		eightball grenade, once armed fires a bouncing projectile that explodes on impact. attachable to walls? detonate when hit? 
+[ ]wpn_jugremake.uc		Jeri's Tool, modifiable, mode switch: door/ffield/projectile override, nailproj, bounceproj, scannerproj, remote explosives 
+----------------------------------------------------------------------------------------------------------------------------------------------------------------
+item_glowstick.uc		reference tool, primary light source. extremely small light radius, infinite charge
+?item_light.uc			toggles on/off, (not) rechargeable, small light radius, hides 2handed weapons
+				casts a flashlight cone, requires batteries, drains slowly, hides 2handed weapons
+				searchlight equivalent, requires bigger batteries, drains quickly, hides 2handed weapons
+				shoulder-mode/held-mode toggle, does not hide 2handed weapons, rechargeable, drains very quickly
+item_callerbeacon.uc		spawn autosave beacon when used, can have multiple copies. burns itself out of inventory if not used
+----------------------------------------------------------------------------------------------------------------------------------------------------------------
+generics_mainwizard.uc		general magic data for generics		'healthcare' modifier; generics data printer; fearfactor data printer; extras
+generics_healthcare.uc		generics: health and fearfactor		keeps track of health-related data, what clamps/increases it, fear factor test	
+//generics_fearfactor.uc        generics: fear factor machine		increases linearly at a constant rate, prints back resulting value, modifies health
+//generics_ABCDEstuff.uc	generics: character-specific		april-related modifiers - values related to viewmesh speeds, movement speeds
+generics_mapstimuli.uc		generics: trigger actors		modify fear factor and health values according to their properties: rate and amount
+generics_extrasens.uc          	generics: extra magic numbers		whatever else i might consider later, might be needed later for additional features
+----------------------------------------------------------------------------------------------------------------------------------------------------------------
+playerpawn_april.uc		april-related player modifiers
+(unused) playerpawn_ianthe.uc	ryan-related player modifiers
+playerpawn_rachel.uc		rachel-related player modifiers
+playerpawn_joshua.uc    	joshua-related playerpawn modifiers
+****************************************************************************************************************************************************************
+MAIN COMMAND LIST:
+****************************************************************************************************************************************************************
+plumbersdontwearties	- same as behindview, but the camera toggles between -> 1stperson, traditional 3rdperson, april_3rdpersonL / april_3rdpersonR
+enablefeareffectmode	- same as behindview, toggles camera hijacking procedures done by apcameras if the level has them around (apcamera needs a rewrite)
+givemesomesugarbaby	- resets health value back to 50 (should be maximum value in this gametype)
+hellogordonfreeman	- test if the screen fades to/from black (add custom colors later maybe?)
+hellodextermorgan	- fade to black (at 2x speed)
+heroesneverdie		- kills the player (for testing if camera still switches to thirdperson once the override is there)
+meinlieben		- test saving system disabler utility (todo hahaha)
+deathbecomesher		- same as godmode (for testing godmode modifiers)
+ttlteste		- canvas operations: test greetings display function from skjinf
+dumpexpointro		- canvas operations: show episode intro text 
+dumpexpooutro		- canvas operations: show episode finale text 
+ttlplaybackfunc		- canvas operations: shows main title
+ttlepisodefunc		- canvas operations: shows episodic title
+ttlmaplocation		- canvas operations: shows location title
+ttlxfileplacetxt	- canvas operations: show current time & location
+ttlcreditstester	- canvas operations: show additional credits title
+****************************************************************************************************************************************************************
+GENERIX - includes all data related to fear factor and generics, literal magic numbers for various purposes 
+****************************************************************************************************************************************************************
+fullmetaljacket		- bulletproof coat functions: toggle bullet instakill on/off
+bastardbitchwanker	- give guidebook item (this should be post-death procedure)
+givemebackmyhealth	- test health countdown restoration/disable procedure (workspaces)
+whereismyinferno	- make fear factor full to check how fast the drain is
+gungholierthanthou	- reset fear factor back to minimum value (clamp is off)
+mynameismisterlam	- clamp fear factor at minimum value on/off
