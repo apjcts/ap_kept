@@ -1,3 +1,4 @@
+tabs got broken. i'm not fixing them. thanks github!
 ================================================================
 Title                   : apKEPT (exploration project template)
 Version                 : 0.003
@@ -34,13 +35,13 @@ Cleanup Guide
 If you wish to update the packages, make sure to get rid of listed-below files before installing the next version: 
 
 	apcamera.u 
-	apr.u 
+	apr.u 			<- content file, if OS notices the difference - replace by a newer file
 	april.ini 		<- you'll need to edit the new version to keep your preferences
-	april.u 
+	april.u			<- content file, if OS notices the difference - replace by a newer file 
 	april_demo.bat 		<- incase launch settings have been changed by the author (which is VERY likely)
 	april_main.bat          <- same deal
-	apriluser.ini 		
-	APRLANG_aprw_v2.ini 
+	apriluser.ini 		<- outdated user file  
+	APRLANG_aprw_v2.ini 	<- replace with the newer version. make a copy if you want to modify plot-related strings  
 	aprlc.u 
 	aprng.u 
 	aprngc.u
